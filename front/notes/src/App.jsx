@@ -8,10 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Redirect from root to /signup */}
         <Route path="/" element={<Navigate to="/signup" />} />
-
-        {/* Define your routes */}
         <Route path="/dashboard" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
