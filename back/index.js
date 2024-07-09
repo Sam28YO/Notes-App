@@ -22,7 +22,7 @@ const { authenticate } = require("./utilities");
 
 app.use(express.json());
 app.use(cors({
-  origin: 'https://notes-es1j5jh8l-koshanks-projects.vercel.app', // Your frontend URL
+  origin: 'https://notes-app-kj.vercel.app', // Your frontend URL
   optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 }));
 app.get("/", (req, res) => {
