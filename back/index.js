@@ -22,9 +22,14 @@ const { authenticate } = require("./utilities");
 
 app.use(express.json());
 app.use(cors({
-  origin: 'https://notes-app-kj.vercel.app', // Your frontend URL
-  optionsSuccessStatus: 200 // Some legacy browsers choke on 204
+  origin: 'https://notes-app-kj.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
 }));
+
+// Handle preflight requests
+app.options('*', cors());
 app.get("/", (req, res) => {
   res.json({ data: "hello" });
 });
