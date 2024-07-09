@@ -22,7 +22,7 @@ const { authenticate } = require("./utilities");
 
 app.use(express.json());
 app.use(cors({
-  origin: 'https://notes-app-kj.vercel.app',
+  origin: '*',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   preflightContinue: false,
   optionsSuccessStatus: 204,
